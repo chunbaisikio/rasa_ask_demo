@@ -1,0 +1,27 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: zh
+
+pipeline:
+   - name: JiebaTokenizer
+   - name: RegexFeaturizer
+   - name: MitieNLP
+     model: "data/total_word_feature_extractor_zh.dat"
+   - name: LexicalSyntacticFeaturizer
+   - name: CountVectorsFeaturizer
+     analyzer: char_wb
+     min_ngram: 1
+     max_ngram: 4
+   - name: MitieEntityExtractor
+   - name: ResponseSelector
+     epochs: 100                                                                      
+   - name: MitieIntentClassifier
+  
+
+
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 200
+  - name: RulePolicy

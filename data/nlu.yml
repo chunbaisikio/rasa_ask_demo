@@ -1,0 +1,88 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - 嗨
+    - 你好
+    - 哈喽
+    - 早上好
+    - 中午好
+    - 晚上好
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - 下午见
+    - 拜拜
+    - 拜
+    - 一会见
+- intent: request_driver
+  examples: |
+    - 查货物
+    - 帮我看看有没有货
+    - 查下货
+    - 有货没
+    - 我想知道有没有[明天](date_time)的货
+    - [明天](date_time)的货
+    - [今天](date_time)有货没
+    - 帮我查下[后天](date_time)的货物
+    - 查下有没有从[广州](address)发出的货
+    - 查下有没有到[广州](address)的货
+    - [长沙](address)发出的有么
+    - [深圳](address)[明天](date_time)的货物
+    - 查下[今天](date_time)去[上海](address)的货物
+    - 帮我查查[佛山](address)这[周六](date_time)发出的货物
+    - 我在[上海](address)空车
+    - 我想要去[上海](address)
+    - 我现在在[宁波](address)
+    - 我现在人在[广州](address)
+    - 有没有去[杭州](address)的
+    - 我[明天](date_time)在[广州](address)空车
+    - 我[后天](date_time)在[深圳](address)卸货
+    - [上海](address)[明天](date_time)有没有货？
+    - [明日](date_time)有货么
+    - [上海](address)有货么
+    - [明天](date_time)有货么
+    - 有货么
+    - [上海](address)[明天](date_time)有没有货
+    - 从[上海](address)出发的货有么
+- intent: thanks
+  examples: |
+    - 谢谢
+    - thanks
+    - thank you
+    - 真的太感谢你了，帮了我大忙
+    - 谢谢你帮了我大忙
+    - 你帮了我大忙，谢谢你小智
+    - 非常感谢
+    - 谢了
+- intent: stop
+  examples: |
+    - 你是不是傻
+    - 你就像个傻逼一样
+    - 真差劲，什么都不懂
+    - 真蠢
+    - 什么都查不到
+    - 你什么都不会
+    - 感觉你什么都不知道
+    - 你太蠢了
+    - 我不查了，太傻了
+    - 就这样吧
+    - 感觉你什么都不会
+    - 没有了
+    - 什么都没查到
+    - 我猜你是不是坏了
+    - [查完了，88](date_time)

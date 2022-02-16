@@ -1,0 +1,27 @@
+version: "2.0"
+rules:
+- rule: Activate form
+  steps:
+  - intent: request_driver
+  - action: driver_form
+  - slot_was_set:
+    - date_time: 明天
+  - slot_was_set:
+    - address_from: [上海]
+  - slot_was_set:
+    - address_to: [上海,广州]
+  - active_loop: driver_form
+  
+- rule: Submit form
+  condition:
+  - active_loop: driver_form
+  steps:
+  - action: driver_form
+  - active_loop: null
+  - slot_was_set:
+    - date_time: 明天
+  - slot_was_set:
+    - address_from: [上海]
+  - slot_was_set:
+    - address_to: [上海,广州]
+  - action: driver_done

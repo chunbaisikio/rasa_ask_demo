@@ -1,0 +1,224 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - 嗨
+    - 你好
+    - 哈喽
+    - 早上好
+    - 中午好
+    - 晚上好
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - 下午见
+    - 拜拜
+    - 拜
+    - 一会见
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - 是的
+    - 确实
+    - 当然
+    - 听起来不错
+    - 对滴
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - 不
+    - 没有
+    - 绝不
+    - 我不这么认为
+    - 不可能
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - 完美
+    - 很好
+    - 好意外啊
+    - 真棒
+    - 我觉得挺好的
+    - 极好
+    - 非常完美
+    - 非常好
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - 伤心
+    - 我感觉非常不好
+    - 失望
+    - 超级伤心
+    - 非常伤心
+    - 不好
+    - 非常不好
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - 你是机器人吗？
+    - 你是人类么？
+    - 我正在和机器人交谈？
+- intent: request_driver
+  examples: |
+    - 查货物
+    - 帮我看看有没有货
+    - 查下货
+    - 有货没
+    - 我想知道有没有[明天](date_time)的货
+    - [明天](date_time)的货
+    - [今天](date_time)有货没
+    - 帮我查下[后天](date_time)的货物
+    - 查下有没有从[广州](address)发出的货
+    - 查下有没有到[广州](address)的货
+    - [长沙](address)发出的有么
+    - [深圳](address)[明天](date_time)的货物
+    - 查下[今天](date_time)去[上海](address)的货物
+    - 帮我查查[佛山](address)这[周六](date_time)发出的货物
+    - 我在[上海](address)空车
+    - 我想要去[上海](address)
+    - 我现在在[宁波](address)
+    - 我现在人在[广州](address)
+    - 有没有去[杭州](address)的
+    - 我[明天](date_time)在[广州](address)空车
+    - 我[后天](date_time)在[深圳](address)卸货
+    - [上海](address)[明天](date_time)有没有货？
+    - [明日](date_time)有货么
+    - [上海](address)有货么
+    - [明天](date_time)有货么
+    - 有货么
+    - [上海](address)[明天](date_time)有没有货
+    - 从[上海](address)出发的货有么
+- intent: thanks
+  examples: |
+    - 谢谢
+    - thanks
+    - thank you
+    - 真的太感谢你了，帮了我大忙
+    - 谢谢你帮了我大忙
+    - 你帮了我大忙，谢谢你小智
+    - 非常感谢
+    - 谢了
+- intent: chitchat
+  examples: |
+    - 你喜欢靓仔靓女吗
+    - 能跟我说说你的男朋友吗
+    - 嘿，朋友，你好啊?
+    - 你是堆的
+    - 你今天过得开心吗
+    - 你没事吧
+    - 今天感觉怎么样
+    - 广州今天下雨了
+    - 我能够知道谁邀请你吗
+    - 请告诉我谁创造了你
+    - 你的老板是谁
+    - 我想知道谁发明了你
+    - 你是哪家公司的
+    - 你是谁发明的
+    - 你是什么
+    - 你还好吗
+    - 你现在在干什么
+    - 最近怎么样
+    - 你最近过得怎么样
+    - 谁是林俊杰
+    - 卢十瓦是不是疯了
+    - 你这个早上干什么了
+    - 外面真安静
+    - 现在的生活变得越来越好了
+    - 是不是下雨了
+    - 今天的天气很好，不是吗
+    - 外面好冷啊
+    - 你认识张天爱吗
+    - 现在的世界真乱，你说是不是
+    - 你今天看不起不错哟
+    - 你觉得华为手机怎么样
+    - 你知不知道新型冠形病毒
+- intent: stop
+  examples: |
+    - 你是不是傻
+    - 你就像个傻逼一样
+    - 真差劲，什么都不懂
+    - 真蠢
+    - 什么都查不到
+    - 你什么都不会
+    - 感觉你什么都不知道
+    - 你太蠢了
+    - 我不查了，太傻了
+    - 就这样吧
+    - 感觉你什么都不会
+    - 没有了
+    - 什么都没查到
+    - 我猜你是不是坏了
+    - [查完了，88](date_time)
+- intent: inform
+  examples: |
+    - 我想知道有没有[明天](date_time)的货
+    - [明天](date_time)的货
+    - [今天](date_time)有货没
+    - 帮我查下[后天](date_time)的货物
+    - 查下有没有从[广州](address)发出的货
+    - 查下有没有到[广州](address)的货
+    - [长沙](address)发出的有么
+    - [深圳](address)[明天](date_time)的货物
+    - 查下[今天](date_time)去[上海](address)的货物
+    - 帮我查查[佛山](address)这[周六](date_time)发出的货物
+    - 我在[上海](address)空车
+    - 我想要去[上海](address)
+    - 我现在在[宁波](address)
+    - 我现在人在[广州](address)
+    - 有没有去[杭州](address)的
+    - 我[明天](date_time)在[广州](address)空车
+    - 我[后天](date_time)在[深圳](address)卸货

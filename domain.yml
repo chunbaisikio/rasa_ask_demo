@@ -1,0 +1,54 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- goodbye
+- greet
+- request_driver
+- stop
+- thanks
+entities:
+- date_time
+- address
+slots:
+  date_time:
+    type: text
+    influence_conversation: true
+  address_to:
+    type: list
+    influence_conversation: true
+  address_from:
+    type: list
+    influence_conversation: true
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_ask_driver_form_date_time:
+  - text: 您哪天空车呢？
+  utter_ask_driver_form_address_to:
+  - text: 请问您想要去哪？
+  utter_ask_driver_form_address_from:
+  - text: 请问您在哪空车？
+  utter_default:
+  - text: 没听懂，请换种说法吧~
+actions:
+- utter_ask_driver_form_date_time
+- utter_default
+- driver_done
+forms:
+  driver_form:
+    required_slots:
+      date_time:
+      - type: from_entity
+        entity: date_time
+        not_intent: excluded_intent
+      address_from:
+      - type: from_entity
+        entity: address
+        not_intent: excluded_intent
+      address_to:
+      - type: from_entity
+        entity: address
+        not_intent: excluded_intent
